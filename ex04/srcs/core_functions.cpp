@@ -6,7 +6,7 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 16:38:29 by antoinejour       #+#    #+#             */
-/*   Updated: 2025/01/13 19:04:28 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/01/14 10:02:37 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ void    parsing(int argc, char **argv)
         std::cout << "Not enough ot too many args" << std::endl;
         exit (1);
     }
-    if (argv[1] == NULL || argv[2] == NULL || argv[3] == NULL)
+    if (argv[1] == NULL || argv[2] == NULL)
     {
-        std::cout << "Strings cannot be empty" << std::endl;
+        std::cout << "File name and search cannot be empty" << std::endl;
         exit (1);
     }
 }
@@ -37,9 +37,9 @@ void    read_and_store_every_lines(std::ifstream& infilestream, std::string& inf
     std::string line;
 
     while(getline(infilestream, line))
-   {
+    {
      infilecontent += line + "\n";
-   }
+    }
    if (!infilecontent.empty())
     infilecontent = infilecontent.substr(0, infilecontent.size() - 1);
    return ;

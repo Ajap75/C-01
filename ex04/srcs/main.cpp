@@ -6,7 +6,7 @@
 /*   By: anastruc <anastruc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 12:13:14 by antoinejour       #+#    #+#             */
-/*   Updated: 2025/01/13 19:15:40 by anastruc         ###   ########.fr       */
+/*   Updated: 2025/01/14 10:16:56 by anastruc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int main (int argc, char **argv)
     infilestream.open(infilename.c_str(), std::ios::in); 
     infilename = infilename + ".replace";
     outfilestream.open(infilename.c_str());
-    check_files_status(infilestream, outfilestream);
+    check_files_status(infilestream, outfilestream, infilename);
     read_and_store_every_lines(infilestream, infilecontent);
     find_s1_and_fill_outputstream(&infilecontent, s1, s2, outfilestream);
 }
